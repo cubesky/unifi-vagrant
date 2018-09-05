@@ -1,8 +1,5 @@
 #!/bin/sh
+echo 'deb http://www.ubnt.com/downloads/unifi/debian stable ubiquiti' | tee /etc/apt/sources.list.d/100-ubnt-unifi.list
+apt-key adv --keyserver keyserver.ubuntu.com --recv 06E85760C0A52C50
 apt-get update
-apt-get install mc vim htop ncdu 
-wget -c -N http://dl.ubnt.com/unifi/5.7.23/unifi_sysvinit_all.deb
-dpkg -i unifi_sysvinit_all.deb
-apt-get -f install -y
-
-
+apt-get install unifi
